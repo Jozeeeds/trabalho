@@ -1,0 +1,121 @@
+C: 22, 0: Line too long (88/80) (line-too-long)
+C: 29, 0: Line too long (84/80) (line-too-long)
+C: 36, 0: Line too long (82/80) (line-too-long)
+C: 43, 0: Final newline missing (missing-final-newline)
+C:  1, 0: Invalid module name "094d18d8512f4e20d015686f3fb594bf" (invalid-name)
+C:  1, 0: Missing module docstring (missing-docstring)
+C:  5, 0: Missing class docstring (missing-docstring)
+C: 10, 4: Missing method docstring (missing-docstring)
+C: 14, 4: Missing method docstring (missing-docstring)
+C: 17, 4: Missing method docstring (missing-docstring)
+C: 21, 4: Invalid method name "test_multiplicacao_valor_invalido" (invalid-name)
+C: 21, 4: Missing method docstring (missing-docstring)
+C: 24, 4: Missing method docstring (missing-docstring)
+C: 28, 4: Missing method docstring (missing-docstring)
+C: 31, 4: Missing method docstring (missing-docstring)
+C: 35, 4: Missing method docstring (missing-docstring)
+C: 38, 4: Missing method docstring (missing-docstring)
+C:  2, 0: standard import "import unittest" comes before "import Calculadora" (wrong-import-order)
+
+Faltaram algumas boas praticas de codigo, conforme pode ser analisado, a ordem de importacao esta incorreta, os diversos erros de missing docstring poderiam ser corrigidos
+apenas com um arquivo .pylintrc e adicionando o seguinte
+
+[MASTER]
+disable=
+    C0114, # missing-module-docstring
+
+porém não irei desativar pois vem de padrao,
+
+
+Report
+======
+29 statements analysed.
+
+Statistics by type
+------------------
+
++---------+-------+-----------+-----------+------------+---------+
+|type     |number |old number |difference |%documented |%badname |
++=========+=======+===========+===========+============+=========+
+|module   |1      |NC         |NC         |0.00        |100.00   |
++---------+-------+-----------+-----------+------------+---------+
+|class    |1      |NC         |NC         |0.00        |0.00     |
++---------+-------+-----------+-----------+------------+---------+
+|method   |10     |NC         |NC         |10.00       |10.00    |
++---------+-------+-----------+-----------+------------+---------+
+|function |0      |NC         |NC         |0           |0        |
++---------+-------+-----------+-----------+------------+---------+
+
+
+
+Raw metrics
+-----------
+
++----------+-------+------+---------+-----------+
+|type      |number |%     |previous |difference |
++==========+=======+======+=========+===========+
+|code      |30     |68.18 |NC       |NC         |
++----------+-------+------+---------+-----------+
+|docstring |0      |0.00  |NC       |NC         |
++----------+-------+------+---------+-----------+
+|comment   |0      |0.00  |NC       |NC         |
++----------+-------+------+---------+-----------+
+|empty     |14     |31.82 |NC       |NC         |
++----------+-------+------+---------+-----------+
+
+
+
+Duplication
+-----------
+
++-------------------------+------+---------+-----------+
+|                         |now   |previous |difference |
++=========================+======+=========+===========+
+|nb duplicated lines      |0     |NC       |NC         |
++-------------------------+------+---------+-----------+
+|percent duplicated lines |0.000 |NC       |NC         |
++-------------------------+------+---------+-----------+
+
+
+
+Messages by category
+--------------------
+
++-----------+-------+---------+-----------+
+|type       |number |previous |difference |
++===========+=======+=========+===========+
+|convention |19     |NC       |NC         |
++-----------+-------+---------+-----------+
+|refactor   |0      |NC       |NC         |
++-----------+-------+---------+-----------+
+|warning    |0      |NC       |NC         |
++-----------+-------+---------+-----------+
+|error      |1      |NC       |NC         |
++-----------+-------+---------+-----------+
+
+
+
+Messages
+--------
+
++----------------------+------------+
+|message id            |occurrences |
++======================+============+
+|missing-docstring     |11          |
++----------------------+------------+
+|line-too-long         |3           |
++----------------------+------------+
+|invalid-name          |3           |
++----------------------+------------+
+|wrong-import-order    |1           |
++----------------------+------------+
+|missing-final-newline |1           |
++----------------------+------------+
+|import-error          |1           |
++----------------------+------------+
+
+
+
+Global evaluation
+-----------------
+Your code has been rated at 1.72/10

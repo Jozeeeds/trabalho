@@ -1,5 +1,5 @@
-import Calculadora
 import unittest
+import Calculadora
 
 
 class CalculadoraTests(unittest.TestCase):
@@ -14,28 +14,28 @@ class CalculadoraTests(unittest.TestCase):
     def teste_soma_valor_invalido(self):
         self.assertRaises(ValueError, self.Calculadora.soma, "Quatro", "Cinco")
 
-    def test_multiplicacao(self):
+    def teste_multiplicacao(self):
         result = self.Calculadora.multiplicacao(5, 3)
         self.assertEqual(15, result)
 
-    def test_multiplicacao_valor_invalido(self):
+    def teste_multiplicacao_valor_invalido(self):
         self.assertRaises(ValueError, self.Calculadora.multiplicacao, "Quatro", "Cinco")
 
     def test_subtracao(self):
         result = self.Calculadora.subtracao(6, 4)
         self.assertEqual(2, result)
 
-    def test_subtracao_valor_invalido(self):
+    def teste_subtracao_valor_invalido(self):
         self.assertRaises(ValueError, self.Calculadora.subtracao, "Quatro", "Cinco")
 
-    def test_dividir(self):
+    def teste_dividir(self):
         result = self.Calculadora.dividir(5, 1)
         self.assertEqual(5, result)
 
-    def test_dividir_valor_invalido(self):
+    def teste_dividir_valor_invalido(self):
         self.assertRaises(ValueError, self.Calculadora.dividir, "Cinco", "Quatro")
 
-    def test_dividir_por_zero(self):
+    def teste_dividir_por_zero(self):
         self.assertRaises(ZeroDivisionError, self.Calculadora.dividir, 5, 0)
 
 
